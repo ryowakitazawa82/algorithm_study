@@ -17,15 +17,18 @@
 */
 fun main(args: Array<String>) {
     val num:Int
-    for(i in 1..10) {
+    for(i in 0..10) {
         print("${i}:${calc(i)}\n")
     }
 }
 
 fun calc(num : Int):Int {
-    var result = 1
-    for(i in 1..num - 1) {
-        result *= num
+    val numList = mutableListOf<Int>(1)
+    for(i in 1..num ) {
+        numList.add(2)
     }
-    return result
+    var result = 1
+    return numList.reduce {
+        tmp, value -> tmp * value
+    }
 }
