@@ -15,4 +15,16 @@ class memo {
     val firstNum = readLine()!!.split(" ").map{it.toInt()}
     val afterFirstNum = (0 until firstNum[0]).map{readLine()!!.split(' ').map{it.toInt()}}
     //imputNumを算出するとき、firstNumは引かれている！！
+
+    fun doWhile() {
+        /* リストにaddしたり変数を更新したやつを使いたい時はforじゃなくて do-whileを使う */
+        val result = mutableListOf<Int>()
+        var score = 100
+        var i = 0
+        do {
+            result.add(1)
+            i++
+            TODO()
+        } while (i < 3)
+    }
 }
